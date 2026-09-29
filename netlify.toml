@@ -1,7 +1,7 @@
 # Netlify builds this Next.js app with its Next.js runtime (auto-installed).
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "dist"   # must match distDir in next.config.js
 
 [build.environment]
   NODE_VERSION = "20"
