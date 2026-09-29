@@ -1,5 +1,3 @@
-// @flow strict
-
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
@@ -24,7 +22,7 @@ function Experience() {
         <div className="flex  items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
           <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Experiences
+            Experience
           </span>
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
         </div>
@@ -33,7 +31,7 @@ function Experience() {
       <div className="py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="flex justify-center items-start">
-            <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full flex items-center justify-center lg:sticky lg:top-24">
               <AnimationLottie animation="code" />
             </div>
           </div>
@@ -69,6 +67,16 @@ function Experience() {
                         <p className="text-sm sm:text-base">
                           {experience.company}
                         </p>
+                        {experience.summary && (
+                          <p className="mt-3 text-xs sm:text-sm text-[#d3d8e8]">
+                            {experience.summary}
+                          </p>
+                        )}
+                        {experience.tech?.length > 0 && (
+                          <p className="mt-2 text-xs sm:text-sm text-[#16f2b3]">
+                            {experience.tech.join(" · ")}
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>
