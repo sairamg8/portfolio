@@ -12,14 +12,14 @@ const NavLinks = [
     link: "/#experience",
   },
   {
-    key: "projects",
-    label: "PROJECTS",
-    link: "/#projects",
-  },
-  {
     key: "skills",
     label: "SKILLS",
     link: "/#skills",
+  },
+  {
+    key: "projects",
+    label: "PROJECTS",
+    link: "/#projects",
   },
   {
     key: "education",

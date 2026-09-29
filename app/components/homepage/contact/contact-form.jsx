@@ -63,8 +63,7 @@ function ContactForm() {
       });
       toast.success("Message sent successfully!");
       setUserInput({ name: "", email: "", message: "" });
-    } catch (err) {
-      console.error("EmailJS send failed:", err);
+    } catch {
       toast.error("Couldn't send via the form — opening your email app instead.");
       openMailFallback(userInput);
     } finally {
@@ -75,12 +74,12 @@ function ContactForm() {
   return (
     <div>
       <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
-        Contact with me
+        Get in touch
       </p>
       <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
         <p className="text-sm text-[#d3d8e8]">
           {
-            "If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests."
+            "I'm open to frontend and UI engineering roles. If you're hiring, or want to talk about a project, send me a message and I'll get back to you."
           }
         </p>
         <form ref={formRef} className="mt-6 flex flex-col gap-4">

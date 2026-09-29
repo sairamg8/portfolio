@@ -1,4 +1,3 @@
-// @flow strict
 import { personalData } from "@/utils/data/personal-data";
 import Link from "next/link";
 import { BiLogoLinkedin } from "react-icons/bi";
@@ -21,20 +20,26 @@ function ContactSection() {
         <ContactForm />
         <div className="lg:w-3/4 ">
           <div className="flex flex-col gap-5 lg:gap-9">
-            <p className="text-sm md:text-xl flex items-center gap-3">
+            <a
+              href={`mailto:${personalData.email}`}
+              className="text-sm md:text-xl flex items-center gap-3 hover:text-[#16f2b3] transition-colors duration-300"
+            >
               <MdAlternateEmail
                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={36}
               />
               <span>{personalData.email}</span>
-            </p>
-            <p className="text-sm md:text-xl flex items-center gap-3">
+            </a>
+            <a
+              href={`tel:${personalData.phone.replace(/\s/g, "")}`}
+              className="text-sm md:text-xl flex items-center gap-3 hover:text-[#16f2b3] transition-colors duration-300"
+            >
               <IoMdCall
                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={36}
               />
               <span>{personalData.phone}</span>
-            </p>
+            </a>
             <p className="text-sm md:text-xl flex items-center gap-3">
               <CiLocationOn
                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
@@ -44,19 +49,19 @@ function ContactSection() {
             </p>
           </div>
           <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">
-            <Link target="_blank" href={personalData.github}>
+            <Link target="_blank" rel="noopener noreferrer" href={personalData.github}>
               <IoLogoGithub
                 className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={48}
               />
             </Link>
-            <Link target="_blank" href={personalData.linkedIn}>
+            <Link target="_blank" rel="noopener noreferrer" href={personalData.linkedIn}>
               <BiLogoLinkedin
                 className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={48}
               />
             </Link>
-            <Link target="_blank" href={personalData.stackOverflow}>
+            <Link target="_blank" rel="noopener noreferrer" href={personalData.stackOverflow}>
               <FaStackOverflow
                 className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                 size={48}
