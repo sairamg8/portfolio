@@ -19,7 +19,7 @@ export const personalData = {
   email: "sairamgudiputi8@gmail.com",
   phone: "+91 8519819953",
   address: "Bangalore, India",
-  github: "https://github.com/sairam-cpwt",
+  github: "https://github.com/sairamg8",
   linkedIn: "https://www.linkedin.com/in/sairamg8/",
   stackOverflow: "https://stackoverflow.com/users/18631260/sairam-gudiputi",
   resume: "https://drive.google.com/file/d/1DOmAk37Qgze8fslN5toCkXKR8u93OAny/view?usp=drive_link",
