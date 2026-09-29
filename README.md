@@ -1,0 +1,15 @@
+
+# Sections
+
+- HERO SECTION
+- ABOUT ME
+- EXPERIENCE
+- SKILLS
+- PROJECTS
+- EDUCATION
+- BLOG
+- CONTACTS
+
+---
+
+Thank you

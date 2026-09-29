@@ -1,0 +1,14 @@
+# Netlify builds this Next.js app with its Next.js runtime (auto-installed).
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Set these in Netlify → Site configuration → Environment variables (NOT here — keep keys out of git).
+# They are NEXT_PUBLIC_*, so they are inlined at BUILD time: redeploy after adding/changing them.
+#   NEXT_PUBLIC_SERVICE_ID    EmailJS service id   (contact form)
+#   NEXT_PUBLIC_EMAIL_PUBLIC  EmailJS public key   (contact form)
+#   NEXT_PUBLIC_TEMPLATE_ID   EmailJS template id  (optional, defaults to template_eah9civ)
+#   NEXT_PUBLIC_GTM           Google Tag Manager id (optional)
