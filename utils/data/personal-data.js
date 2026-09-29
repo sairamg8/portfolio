@@ -10,5 +10,5 @@ export const personalData = {
   github: "https://github.com/sairam-cpwt",
   linkedIn: "https://www.linkedin.com/in/sairamg8/",
   stackOverflow: "https://stackoverflow.com/users/18631260/sairam-gudiputi",
-  resume: "/Sairam_Gudiputi_Resume.pdf",
+  resume: "https://drive.google.com/file/d/1DOmAk37Qgze8fslN5toCkXKR8u93OAny/view?usp=drive_link",
 };
