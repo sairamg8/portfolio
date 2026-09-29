@@ -7,12 +7,12 @@ import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import { personalData } from "@/utils/data/personal-data";
 
-// NEXT_PUBLIC_* values are inlined at build time: they must be set in Netlify's
-// environment variables BEFORE the build, otherwise they are undefined in the browser.
+// EmailJS ids are public by design (they ship to the browser). Netlify env vars
+// (NEXT_PUBLIC_*, inlined at build time) override these defaults when set.
 const EMAILJS = {
-  serviceId: process.env.NEXT_PUBLIC_SERVICE_ID,
+  serviceId: process.env.NEXT_PUBLIC_SERVICE_ID || "service_7jvtock",
   templateId: process.env.NEXT_PUBLIC_TEMPLATE_ID || "template_eah9civ",
-  publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC,
+  publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC || "3AU7ft9hnR264UxSm",
 };
 
 // Without EmailJS keys, fall back to the visitor's mail app so no message is lost.
