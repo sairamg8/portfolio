@@ -2,7 +2,6 @@
 import { educations } from "@/utils/data/educations";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import lottieFile from '../../../assets/lottie/study.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 
@@ -36,7 +35,7 @@ function Education() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="flex justify-center items-start">
             <div className="w-3/4 h-3/4">
-              <AnimationLottie animationPath={lottieFile} />
+              <AnimationLottie animation="study" />
             </div>
           </div>
 
