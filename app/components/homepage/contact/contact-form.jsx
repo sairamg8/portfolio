@@ -63,8 +63,7 @@ function ContactForm() {
       });
       toast.success("Message sent successfully!");
       setUserInput({ name: "", email: "", message: "" });
-    } catch (err) {
-      console.error("EmailJS send failed:", err);
+    } catch {
       toast.error("Couldn't send via the form — opening your email app instead.");
       openMailFallback(userInput);
     } finally {
