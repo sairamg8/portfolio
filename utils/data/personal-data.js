@@ -11,4 +11,6 @@ export const personalData = {
   linkedIn: "https://www.linkedin.com/in/sairamg8/",
   stackOverflow: "https://stackoverflow.com/users/18631260/sairam-gudiputi",
   resume: "https://drive.google.com/file/d/1DOmAk37Qgze8fslN5toCkXKR8u93OAny/view?usp=drive_link",
+  // dev.to username for /blog. Empty = no blog (the /blog route returns 404).
+  devUsername: "",
 };
